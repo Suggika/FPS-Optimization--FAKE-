@@ -1,0 +1,4 @@
+1. Открываем PowerShell, который в папке от имени администратора.
+2. Копируем то что ниже, вставляем в PowerShell и жмем Enter.
+
+Get-AppXPackage -allusers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
